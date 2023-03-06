@@ -1,0 +1,48 @@
+*{
+	font-size: 14px;
+	border-collapse: collapse;
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+	font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+
+table {
+	display: block;
+  	max-width: -moz-fit-content;
+  	max-width: fit-content;
+  	margin: 0 auto;
+  	white-space: nowrap;
+	width: 100%;
+}
+
+table th, table td{
+	padding: 0.7rem;
+	border-top: 1px solid #e3e6f0;
+}
+
+.table tbody + tbody {
+	border-top: 2px solid #e3e6f0;
+}
+
+form {
+	display: flex;
+	width: 100%;
+	padding: 10px;
+}
+
+form input {
+	padding: 5px;
+}
+
+form input[type="submit"]{
+	background-color: #337ab7;
+	border: none;
+	margin-left: auto;
+	color: white;
+}
+
+form div {
+	margin-right: 10px;
+}

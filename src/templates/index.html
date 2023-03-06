@@ -1,0 +1,83 @@
+{% extends 'public/base.html' %}
+
+
+{% block body %}
+<div>
+		<h4>Add Filter</h4>
+		<form>
+				<div>
+					<label>Latitude</label>
+					<input type="text" name="latitude">
+				</div>
+				<div>
+						<label>Longitude</label>
+						<input type="text" name="longitude">
+				</div>
+				<div>
+						<label>Location</label>
+						<input type="text" name="location">
+				</div>
+				<input type="submit" text="Search">
+		</form>
+</div>
+<div>
+		<table>
+				<thead>
+						<tr>
+								<td>Index</td>
+								<td>Time</td>
+								<td>Latitude</td>
+								<td>Longitude</td>
+								<td>Depth</td>
+								<td>Mag</td>
+								<td>MagType</td>
+								<td>nst</td>
+								<td>Gap</td>
+								<td>dmin</td>
+								<td>rms</td>
+								<td>net</td>
+								<td>id</td>
+								<td>updated</td>
+								<td>place</td>
+								<td>type</td>
+								<td>horizontalError</td>
+								<td>depthError</td>
+								<td>magError</td>
+								<td>magNst</td>
+								<td>status</td>
+								<td>locationSource</td>
+								<td>magSource</td>
+						</tr>
+				</thead>
+				<tbody>
+						{% for columns, rows in data.iterrows() %}
+						<tr>
+								<td>{{rows["index"]}}</td>
+								<td>{{rows["time"]}}</td>
+								<td>{{rows["latitude"]}}</td>
+								<td>{{rows["longitude"]}}</td>
+								<td>{{rows["depth"]}}</td>
+								<td>{{rows["mag"]}}</td>
+								<td>{{rows["magType"]}}</td>
+								<td>{{rows["nst"]}}</td>
+								<td>{{rows["gap"]}}</td>
+								<td>{{rows["dmin"]}}</td>
+								<td>{{rows["rms"]}}</td>
+								<td>{{rows["net"]}}</td>
+								<td>{{rows["id"]}}</td>
+								<td>{{rows["updated"]}}</td>
+								<td>{{rows["place"]}}</td>
+								<td>{{rows["type"]}}</td>
+								<td>{{rows["horizontalError"]}}</td>
+								<td>{{rows["depthError"]}}</td>
+								<td>{{rows["magError"]}}</td>
+								<td>{{rows["magNst"]}}</td>
+								<td>{{rows["status"]}}</td>
+								<td>{{rows["locationSource"]}}</td>
+								<td>{{rows["magSource"]}}</td>
+						</tr>
+						{% endfor %}
+				</tbody>
+		</table>
+</div>
+{% endblock body %}
